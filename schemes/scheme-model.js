@@ -23,7 +23,7 @@ function findById(id){
 
  function add(scheme){
     return db("schemes")
-    .insert(scheme, "id")
+    .insert(scheme)
     .then(ids=>{
         return findById(ids[0])
     })
